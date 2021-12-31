@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     # We don't do @post.user = current_user because we want to practice using a helper on the line below
-    @post.user = assign_post_creator(@post, current_user)
+    @post = assign_post_creator(@post, current_user)
 
     respond_to do |format|
       if @post.save
@@ -70,6 +70,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :user_id, :views)
+      params.require(:post).permit(:title, :body)
     end
 end
