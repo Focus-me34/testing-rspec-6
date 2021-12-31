@@ -3,8 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  current_user = User.first_or_create(email: 'test@test.com')
-
+  current_user = User.first_or_create(email: 'test@test.com', password: "111111", password_confirmation: '111111' )
   it "has a title attached to a user's post" do
     post = Post.new(
       title: '',
@@ -65,7 +64,7 @@ RSpec.describe Post, type: :model do
     post.body = '500 + CHARACTERS lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll'
     expect(post).to_not be_valid
 
-    post.body = 'LESS THAN 500 CHARACTERS lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll'
+    post.body = 'LESS THAN 100 CHARACTERS lllrspeclllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll'
     expect(post).to be_valid
 
     expect(post.body.length).to be_between(5, 500).inclusive
