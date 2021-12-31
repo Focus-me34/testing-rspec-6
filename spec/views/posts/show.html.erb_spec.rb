@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'posts/show', type: :view do
-  current_user = User.first_or_create(email: 'test@test.com', password: "111111", password_confirmation: '111111' )
+  current_user = User.first_or_create!(email: 'test@test.com', password: "111111", password_confirmation: '111111' )
 
   before(:each) do
     @post = assign(:post, Post.create!(
