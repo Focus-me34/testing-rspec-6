@@ -1,3 +1,45 @@
+GIT
+  remote: https://github.com/rspec/rspec-core
+  revision: e3bda9da1e625a428fd005f0d1a633531f5da749
+  specs:
+    rspec-core (3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations
+  revision: d9fd9a5589e3914bcd25d66560eccadd75493727
+  specs:
+    rspec-expectations (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks
+  revision: 17cf86ab61544b93232c4e9ca9784ab212dccbf6
+  specs:
+    rspec-mocks (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails
+  revision: 48b007f2e58063990b2071391512f7f33711cc51
+  specs:
+    rspec-rails (5.1.0.pre)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (= 3.11.0.pre)
+      rspec-expectations (= 3.11.0.pre)
+      rspec-mocks (= 3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support
+  revision: 321dc7227df43cd682c293fa31fa427b94b2ea74
+  specs:
+    rspec-support (3.11.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,23 +196,6 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
-    rspec-core (3.9.3)
-      rspec-support (~> 3.9.3)
-    rspec-expectations (3.9.4)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.9.0)
-    rspec-mocks (3.9.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.9.0)
-    rspec-rails (3.9.1)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.9.0)
-      rspec-expectations (~> 3.9.0)
-      rspec-mocks (~> 3.9.0)
-      rspec-support (~> 3.9.0)
-    rspec-support (3.9.4)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -240,7 +265,11 @@ DEPENDENCIES
   listen (~> 3.2)
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.4)
-  rspec-rails (~> 3.5)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (>= 6)
   selenium-webdriver
   spring
